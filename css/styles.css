@@ -1,0 +1,124 @@
+html,
+body {
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+}
+
+.hero-body {
+  padding: 2.5rem 1.5rem;
+}
+
+.image {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: 100px;
+}
+
+.hero-body {
+  color: #000;
+}
+
+.hero.is-dark {
+  color: #333;
+  background: white;
+  display: table;
+  width: 100%;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.grey {
+  color: #3e3e3e !important;
+}
+
+tr:nth-child(odd) {
+  background-color: #b3b3b311;
+}
+
+.panel-heading {
+  background-color: #f7f7f7;
+}
+
+svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  line-height: 1;
+  position: relative;
+  top: -.05em;
+  margin-left: -0.25em;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
+.bulma-checkbox.checkbox {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+.bulma-checkbox.checkbox {
+  outline: none;
+  display: inline-flex;
+  align-items: center
+}
+
+.bulma-checkbox.checkbox input[type=checkbox] {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  outline: none;
+  z-index: -1
+}
+
+.bulma-checkbox.checkbox input[type=checkbox]+.check {
+  width: 1.25em;
+  height: 1.25em;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 2px solid #7a7a7a;
+  transition: background 150ms ease-out;
+  background: rgba(0,0,0,0)
+}
+
+.bulma-checkbox.checkbox input[type=checkbox]:focus+.check {
+  box-shadow: 0 0 0.5em rgba(122,122,122,0.8)
+}
+
+.bulma-checkbox.checkbox input[type=checkbox]:focus:checked+.check {
+  box-shadow: 0 0 0.5em rgba(0,209,178,0.8)
+}
+
+.bulma-checkbox.checkbox input[type=checkbox]:checked+.check {
+  background: #00d1b2 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath style='fill:%23fff' d='M 0.04038059,0.6267767 0.14644661,0.52071068 0.42928932,0.80355339 0.3232233,0.90961941 z M 0.21715729,0.80355339 0.85355339,0.16715729 0.95961941,0.2732233 0.3232233,0.90961941 z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center;
+  border-color: #00d1b2
+}
+
+.bulma-checkbox.checkbox {
+  border-radius: 2px;
+  font-size: 14px;
+}
+
+.bulma-checkbox:hover {
+  cursor: pointer;
+}
+
+.panel-block input[type=checkbox] {
+  margin-inline-end: 0 !important;
+}
+
+.field {
+  line-height: 0;
+}
+
+.field label {
+  cursor: pointer;
+}
