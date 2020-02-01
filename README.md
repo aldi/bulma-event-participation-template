@@ -1,8 +1,8 @@
 ## Event Participation Template designed using Bulma CSS Framework.
 Part of [Awesome Bulma Templates](https://github.com/aldi/awesome-bulma-templates) repo
 
-## [Live Demo](https://aldi.github.io/bulma-event-participation/index.html)
-![](https://github.com/aldi/bulma-event-participation/blob/master/screenshot.png)
+## [Live Demo](https://aldi.github.io/bulma-event-participation-template/index.html)
+![](https://github.com/aldi/bulma-event-participation-template/blob/master/screenshot.png)
 
 ## Contributing
 
