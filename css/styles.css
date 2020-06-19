@@ -1,24 +1,27 @@
-html, body {
+html,
+body {
   font-family: 'Nanum Gothic', sans-serif;
   color: #fff;
   background: white;
 }
-.is-dark {
-  background-color: #fff;
+.hero-body {
+  padding: 2.5rem 1.5rem;
+}
+.m-0-auto {
+  margin: 0 auto;
 }
 .nav {
   padding: 20px 0;
 }
-.hero.is-dark .nav-item a:not(.button), .hero.is-dark a.nav-item {
-  color: #fff;
-  padding: 0 30px;
+.hero-body {
+  color: #000;
 }
 .nav-item {
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
 }
-.nav-item .button{
+.nav-item .button {
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
@@ -26,19 +29,18 @@ html, body {
   border: 2px solid #fff;
   padding: 10px 20px;
   height: 45px;
-  border-radius;
 }
 .checkboxes {
   text-align: center;
   padding-top: 5px;
 }
 
-.checkboxes input[type="checkbox"]:checked + label::before {
+.checkboxes input[type='checkbox']:checked + label::before {
   background-color: #00d1b2;
   border-color: #00d1b2;
 }
 
-.checkboxes input[type="checkbox"]:checked + label::after {
+.checkboxes input[type='checkbox']:checked + label::after {
   color: #fff;
 }
 
@@ -53,7 +55,6 @@ html, body {
   background: white;
   display: table;
   width: 100%;
-
 }
 .button.is-success.is-outlined {
   background-color: #97cd76;
@@ -65,10 +66,6 @@ html, body {
   background-color: #ed6c63;
   border-color: #ed6c63;
   color: #ffffff;
-}
-h4 {
-  font-size: 18px;
-  margin-top: 50px;
 }
 
 .footer-text {
@@ -87,7 +84,7 @@ h4 {
   text-align: center !important;
 }
 
-.is-checkradio[type=checkbox]+label {
+.is-checkradio[type='checkbox'] + label {
   padding-left: 0 !important;
 }
 
