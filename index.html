@@ -1,46 +1,89 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="aldi" />
-    <meta name="description" content="Free Bulma Event Participation Template, part of Awesome Bulma Templates" />
-    <meta name="keywords" content="bulma, bulma-css, event, participation, template, free, awesome" />
-    <link rel="canonical" href="https://aldi.github.io/bulma-event-participation-template/index.html" />
-    <title>Event Participation Form - Free Bulma Template</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma-checkradio@1.1.1/dist/css/bulma-checkradio.min.css"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <section class="hero is-fullheight is-dark">
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <figure class="image is-96x96 has-text-centered m-0-auto">
-            <img src="media/event_logo_gold.webp" alt="Logo" />
-          </figure>
-          <h1 class="title is-3">Our company celebrates 50 years!</h1>
-          <p>
-            We invite you to our Press Conference & VIP Cocktail on <strong>January 1st 2021</strong> at Tae Kwon Do,
-            VIP hall.<br />
-            We’re so pleased to welcome you to our celebration of linking people together.
-          </p>
-          <p class="is-subtitle mt-3">Select below the talks that you will participate in.</p>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Participation Form - Free Bulma Template</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1/css/bulma.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script>
+    (function initTheme() {
+      const root = document.documentElement;
+      const savedTheme = localStorage.getItem('theme');
+
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        root.setAttribute('data-theme', savedTheme);
+        root.style.colorScheme = savedTheme;
+        return;
+      }
+
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        root.setAttribute('data-theme', 'dark');
+        root.style.colorScheme = 'dark';
+      }
+    })();
+  </script>
+  <meta name="author" content="github.com/aldi" />
+  <meta name="description"
+    content="Download this free, responsive Bulma Event Participation template. Perfect for conferences, meetups, and VIP events. Part of Awesome Bulma Templates." />
+  <meta name="keywords" content="bulma, bulma-css, event, participation, template, free, awesome" />
+  <link rel="canonical" href="https://aldi.github.io/bulma-event-participation-template/" />
+</head>
+
+<body>
+  <section class="hero is-fullheight is-dark">
+    <div class="bokeh" aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <button id="theme-toggle" class="button is-ghost is-rounded theme-toggle" aria-label="Switch to dark mode"
+      aria-pressed="false">
+      <span class="icon is-medium">
+        <span class="icon">
+          <i class="fas fa-moon fa-lg" id="theme-icon"></i>
+        </span>
+      </span>
+    </button>
+    <div class="hero-body">
+      <main class="container has-text-centered">
+        <figure class="image is-96x96 has-text-centered mx-auto">
+          <img src="media/event_logo_gold.webp" alt="Bulma Event Participation Template Logo" width="96" height="96" />
+        </figure>
+        <h1 class="title is-3">
+          Our Company Celebrates 50 Years!
+        </h1>
+        <h2 class="subtitle is-5">
+          Celebrate with us!
+        </h2>
+        <p>
+          We invite you to our Press Conference & VIP Cocktail on
+          <strong><time datetime="2027-01-01">January 1st 2027</time></strong>
+          at Tae Kwon Do, VIP hall.<br />
+          We’re so pleased to welcome you to our celebration of linking people
+          together.
+        </p>
+        <p class="is-subtitle mt-3">
+          Select below the talks that you will participate in.
+        </p>
+        <form id="participation-form">
           <div class="columns is-vcentered">
             <div class="column is-full-mobile">
               <section class="panel">
                 <p class="panel-heading">Program</p>
                 <div class="panel-block">
-                  <table class="table table is-fullwidth">
+                  <table class="table is-fullwidth">
                     <thead>
-                      <tr class="has-text-white">
-                        <th>Time</th>
-                        <th>Talk</th>
-                        <th class="has-text-centered">Select</th>
+                      <tr>
+                        <th scope="col">Time</th>
+                        <th scope="col">Talk</th>
+                        <th scope="col" class="has-text-centered">Select</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -48,125 +91,83 @@
                         <td>9:00</td>
                         <td>Grand Opening</td>
                         <td class="is-icon">
-                          <div class="field">
-                            <input
-                              class="is-checkradio is-info"
-                              type="checkbox"
-                              id="grandopening"
-                              name="grandopening"
-                            />
-                            <label for="grandopening"></label>
-                          </div>
+                          <input class="checkbox" type="checkbox" id="grandopening" name="grandopening"
+                            aria-label="Grand Opening" />
                         </td>
                       </tr>
                       <tr>
                         <td>9:45</td>
-                        <td>Launching of the theme MAKING HISTORY TOGETHER</td>
+                        <td>
+                          Launching of the theme MAKING HISTORY TOGETHER
+                        </td>
                         <td class="is-icon">
-                          <div class="field">
-                            <input
-                              class="is-checkradio is-info"
-                              type="checkbox"
-                              id="makinghistory"
-                              name="makinghistory"
-                            />
-                            <label for="makinghistory"></label>
-                          </div>
+                          <input class="checkbox" type="checkbox" id="makinghistory" name="makinghistory"
+                            aria-label="Launching of the theme MAKING HISTORY TOGETHER" />
                         </td>
                       </tr>
                       <tr>
                         <td>10:00</td>
                         <td>The Founders Speech</td>
                         <td class="is-icon">
-                          <div class="field">
-                            <input
-                              class="is-checkradio is-info"
-                              type="checkbox"
-                              id="foundersspeech"
-                              name="foundersspeech"
-                            />
-                            <label for="foundersspeech"></label>
-                          </div>
+                          <input class="checkbox" type="checkbox" id="foundersspeech" name="foundersspeech"
+                            aria-label="The Founders Speech" />
                         </td>
                       </tr>
                       <tr>
                         <td>10:15</td>
                         <td>Brand</td>
                         <td class="is-icon">
-                          <div class="field">
-                            <input class="is-checkradio is-info" type="checkbox" id="brand" name="brand" />
-                            <label for="brand"></label>
-                          </div>
+                          <input class="checkbox" type="checkbox" id="brand" name="brand" aria-label="Brand" />
                         </td>
                       </tr>
                       <tr>
                         <td>10:25</td>
                         <td>Brand - SkinCare</td>
                         <td class="is-icon">
-                          <div class="field">
-                            <input class="is-checkradio is-info" type="checkbox" id="skincare" name="skincare" />
-                            <label for="skincare"></label>
-                          </div>
+                          <input class="checkbox" type="checkbox" id="skincare" name="skincare"
+                            aria-label="Brand - SkinCare" />
                         </td>
                       </tr>
                       <tr>
                         <td>11:00</td>
                         <td>Brand - Digital</td>
                         <td class="is-icon">
-                          <div class="field">
-                            <input class="is-checkradio is-info" type="checkbox" id="digital" name="digital" />
-                            <label for="digital"></label>
-                          </div>
+                          <input class="checkbox" type="checkbox" id="digital" name="digital"
+                            aria-label="Brand - Digital" />
                         </td>
                       </tr>
                       <tr>
                         <td>12:20</td>
                         <td>Brand - Color & Fragrance</td>
                         <td class="is-icon">
-                          <div class="field">
-                            <input
-                              class="is-checkradio is-info"
-                              type="checkbox"
-                              id="colorandfragrance"
-                              name="colorandfragrance"
-                            />
-                            <label for="colorandfragrance"></label>
-                          </div>
+                          <input class="checkbox" type="checkbox" id="colorandfragrance" name="colorandfragrance"
+                            aria-label="Brand - Color & Fragrance" />
                         </td>
                       </tr>
                       <tr>
                         <td>13:00</td>
                         <td>HALL OF FAME / GRAND CLOSING</td>
                         <td class="is-icon">
-                          <div class="field">
-                            <input
-                              class="is-checkradio is-info"
-                              type="checkbox"
-                              id="grandclosing"
-                              name="grandclosing"
-                            />
-                            <label for="grandclosing"></label>
-                          </div>
+                          <input class="checkbox" type="checkbox" id="grandclosing" name="grandclosing"
+                            aria-label="HALL OF FAME / GRAND CLOSING" />
                         </td>
                       </tr>
                       <tr>
                         <td>14:00</td>
                         <td>Press Conference & VIP Cocktail</td>
                         <td class="is-icon">
-                          <div class="field">
-                            <input class="is-checkradio is-info" type="checkbox" id="vipcoctail" name="vipcoctail" />
-                            <label for="vipcoctail"></label>
-                          </div>
+                          <input class="checkbox" type="checkbox" id="vipcoctail" name="vipcoctail"
+                            aria-label="Press Conference & VIP Cocktail" />
                         </td>
                       </tr>
                       <tr>
                         <td></td>
-                        <td class="has-text-right" style="vertical-align: middle">Select All</td>
+                        <td class="has-text-right">
+                          Select All
+                        </td>
                         <td class="is-icon">
-                          <div class="field">
-                            <input class="is-checkradio" type="checkbox" id="select-all" name="select-all" />
-                            <label for="select-all"></label>
-                          </div>
+                          <input class="checkbox" type="checkbox" id="select-all" name="select-all"
+                            aria-label="Select All Talks" />
                         </td>
                       </tr>
                     </tbody>
@@ -179,45 +180,104 @@
             <p>
               <button class="button is-medium is-info is-outlined" type="submit" value="Submit">
                 <span class="icon">
-                  <i class="fa fa-paper-plane"></i>
+                  <i class="fas fa-paper-plane"></i>
                 </span>
                 <span>Confirm Participation </span>
               </button>
             </p>
             <p class="mt-2">
               If you cannot attend our event, click
-              <a href="https://github.com/aldi" target="_blank"><strong>HERE</strong></a
-              >.
+              <a href="https://github.com/aldi" target="_blank" rel="noopener noreferrer"><strong>HERE</strong></a>.
             </p>
+            <p id="form-feedback" class="mt-3 is-size-7" role="status" aria-live="polite"></p>
           </div>
-        </div>
+        </form>
+      </main>
+    </div>
+    <footer class="hero-foot">
+      <div class="container has-text-centered">
+        <p class="footer-text pb-2">
+          <a href="https://github.com/aldi?utm_source=Github" target="_blank" rel="noopener noreferrer">Designed with
+            <i class="fas fa-heart fa-fw footer-heart"></i>
+            by aldi</a>
+        </p>
       </div>
-      <div class="hero-foot">
-        <div class="container has-text-centered">
-          <p class="footer-text">
-            <a class="has-text-grey" href="https://github.com/aldi?utm_source=Github"
-              >Designed with <i class="fa fa-heart fa-fw" style="font-size: 10px; color: red"></i> by aldi</a
-            >
-          </p>
-        </div>
-      </div>
-    </section>
-    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <script>
-      $(document).ready(function () {
-        $('#select-all').click(function (event) {
-          if (this.checked) {
-            $(':checkbox').each(function () {
-              this.checked = true;
-            });
-          } else {
-            $(':checkbox').each(function () {
-              this.checked = false;
-            });
-          }
-        });
+    </footer>
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeIcon = document.getElementById('theme-icon');
+      const html = document.documentElement;
+
+      if (!themeToggle || !themeIcon) {
+        return;
+      }
+
+      const applyThemeState = (theme) => {
+        const isDark = theme === 'dark';
+        themeToggle.setAttribute('aria-pressed', String(isDark));
+        themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+        themeIcon.classList.toggle('fa-sun', isDark);
+        themeIcon.classList.toggle('fa-moon', !isDark);
+      };
+
+      const initialTheme = html.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      html.setAttribute('data-theme', initialTheme);
+      html.style.colorScheme = initialTheme;
+      applyThemeState(initialTheme);
+
+      themeToggle.addEventListener('click', () => {
+        const isDark = html.getAttribute('data-theme') === 'dark';
+        const nextTheme = isDark ? 'light' : 'dark';
+        html.setAttribute('data-theme', nextTheme);
+        html.style.colorScheme = nextTheme;
+        localStorage.setItem('theme', nextTheme);
+        applyThemeState(nextTheme);
       });
-    </script>
-  </body>
+
+      const form = document.getElementById("participation-form");
+      const selectAllCheckbox = document.getElementById("select-all");
+      const talkCheckboxes = Array.from(document.querySelectorAll(".checkbox")).filter(
+        (checkbox) => checkbox.id !== "select-all"
+      );
+      const feedback = document.getElementById("form-feedback");
+
+      const syncSelectAllState = () => {
+        const checkedCount = talkCheckboxes.filter((checkbox) => checkbox.checked).length;
+        selectAllCheckbox.checked = checkedCount === talkCheckboxes.length && checkedCount > 0;
+        selectAllCheckbox.indeterminate = checkedCount > 0 && checkedCount < talkCheckboxes.length;
+      };
+
+      selectAllCheckbox.addEventListener("change", (event) => {
+        const isChecked = event.target.checked;
+        talkCheckboxes.forEach((checkbox) => {
+          checkbox.checked = isChecked;
+        });
+        selectAllCheckbox.indeterminate = false;
+      });
+
+      talkCheckboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", syncSelectAllState);
+      });
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const selectedCount = talkCheckboxes.filter((checkbox) => checkbox.checked).length;
+        if (selectedCount === 0) {
+          feedback.className = "mt-3 is-size-7 has-text-warning";
+          feedback.textContent = "Please select at least one talk before confirming.";
+          return;
+        }
+
+        feedback.className = "mt-3 is-size-7 has-text-success";
+        feedback.textContent = `Participation confirmed for ${selectedCount} talk${selectedCount === 1 ? "" : "s"}.`;
+      });
+
+      syncSelectAllState();
+    });
+  </script>
+</body>
+
 </html>
