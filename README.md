@@ -1,25 +1,27 @@
 # Event Participation Template
 
-Part of [Awesome Bulma Templates](https://github.com/aldi/awesome-bulma-templates) repo
+A beautifully redesigned, modern dark-luxe event participation template featuring glassmorphism and gold accents.  
+Part of the [Awesome Bulma Templates](https://github.com/aldi/awesome-bulma-templates) repo.
 
 ## [Live Demo](https://aldi.github.io/bulma-event-participation-template/index.html)
 
-![Screenshot](screenshot.png)
+Light Mode:
+![Preview](previews/preview.webp)
+Dark Mode:
+![Preview Dark](previews/preview-dark.webp)
+
+## Features
+
+- **Bulma v1 Compatible**: Built with the latest version of the Bulma CSS framework.
+- **Dark-Luxe Aesthetic**: A premium dark theme featuring deep rich backgrounds and gold brand accents.
+- **Glassmorphism**: Modern frosted glass effect for content panels.
+- **Fully Responsive**: Adapts seamlessly to all screen sizes.
 
 ## Additional Libraries used
 
-Bulma-Checkradio - [github.com/Wikiki/bulma-checkradio](https://github.com/Wikiki/bulma-checkradio)  
-Font-Awesome - [github.com/FortAwesome/Font-Awesome](https://github.com/FortAwesome/Font-Awesome)  
-jQuery - [github.com/jquery/jquery](https://github.com/jquery/jquery)
-
-## Contributing
-
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request!
+- [Bulma-Social](https://github.com/aldi/bulma-social)
+- [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
 
 ## Licence
 
-Code released under [the MIT license](https://github.com/aldi/bulma-event-participation-template/blob/master/LICENSE).
+Released under the [MIT License](LICENSE).
